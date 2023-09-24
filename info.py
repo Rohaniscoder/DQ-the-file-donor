@@ -51,6 +51,7 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 RD_RULES = environ.get('RD_RULES', "https://t.me/c/1845700490/3")
 SUPT_CHNL = environ.get('SUPT_CHNL', "https://t.me/c/1845700490/3")
 CONTACT = environ.get('CONTACT', "https://t.me/c/1845700490/3")
+STRM_BOT = environ.get('STRM_BOT', "https://t.me/c/1845700490/3")
 
 IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1845700490/3")
