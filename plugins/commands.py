@@ -25,7 +25,7 @@ async def start(client, message):
                 InlineKeyboardButton(' ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ  ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],
             [
-                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ', url=SUPT_CHNL),              
+                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ', url=CHNL_LNK),              
                 InlineKeyboardButton('Rᴜʟᴇs', url=RD_RULES)
             ]]
         reply_markup = InlineKeyboardMarkup(buttons)
