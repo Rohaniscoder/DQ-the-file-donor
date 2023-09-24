@@ -49,7 +49,6 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
 RD_RULES = environ.get('RD_RULES', "https://t.me/c/1845700490/3")
-SUPT_CHNL = environ.get('SUPT_CHNL', "https://t.me/c/1845700490/3")
 CONTACT = environ.get('CONTACT', "https://t.me/c/1845700490/3")
 STRM_BOT = environ.get('STRM_BOT', "https://t.me/c/1845700490/3")
 
