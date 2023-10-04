@@ -93,8 +93,7 @@ async def start(client, message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
         buttons = [[
                     InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[
-                    InlineKeyboardButton('ᴠɪᴇᴡ ᴘʀᴇᴍɪᴜᴍ', url=GRP_LNK),
+                ],[                    
                     InlineKeyboardButton('Iɴʟɪɴᴇ Sᴇᴀʀᴄʜ ☌', switch_inline_query_current_chat='')
                 ],[
                     InlineKeyboardButton('ᴀʟʟ ᴄʜᴀɴɴᴇʟs', callback_data='help')                                
