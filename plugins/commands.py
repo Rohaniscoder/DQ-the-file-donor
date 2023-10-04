@@ -150,13 +150,17 @@ async def start(client, message):
                     reply_markup=InlineKeyboardMarkup(
                         [
                          [
-                          InlineKeyboardButton('Cʜᴀɴɴᴇʟs', url=GRP_LNK),
-                          InlineKeyboardButton('Sᴛʀᴇᴀᴍ Oɴʟɪɴᴇ', url=STRM_BOT)
-                         ]
+                          InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                          InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                       ],[
+                          InlineKeyboardButton('ʙᴏᴛ ᴏᴡɴᴇʀ', url="https://t.me/LOYALPROFESSOR")
+                         ],[ 
+                            InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+                            ]
                         ]
                     )
                 )
-            except FloodWait as e:
+            except Exception as e:
                 await asyncio.sleep(e.x)
                 logger.warning(f"Floodwait of {e.x} sec.")
                 await client.send_cached_media(
@@ -166,14 +170,19 @@ async def start(client, message):
                     protect_content=msg.get('protect', False),
                     reply_markup=InlineKeyboardMarkup(
                         [
-                         [
-                          InlineKeyboardButton('Cʜᴀɴɴᴇʟs', url=GRP_LNK),
-                          InlineKeyboardButton('Sᴛʀᴇᴀᴍ Oɴʟɪɴᴇ', url=STRM_BOT)
-                         ]
+                            [
+                                InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                                InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                            ],[
+                                InlineKeyboardButton('ʙᴏᴛ ᴏᴡɴᴇʀ', url="https://t.me/LOYALPROFESSOR")
+                            ],
+                            [
+                                InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+                            ]
                         ]
                     )
                 )
-            except Exception as e:
+            except FloodWait as e:
                 logger.warning(e, exc_info=True)
                 continue
             await asyncio.sleep(1) 
@@ -282,14 +291,19 @@ async def start(client, message):
                 file_id=file_id,
                 protect_content=True if pre == 'filep' else False,
                 reply_markup=InlineKeyboardMarkup(
-                        [
-                         [
-                          InlineKeyboardButton('Cʜᴀɴɴᴇʟs', url=GRP_LNK),
-                          InlineKeyboardButton('Sᴛʀᴇᴀᴍ Oɴʟɪɴᴇ', url=STRM_BOT)
-                         ]
-                        ]
-                    )
+                    [
+                     [
+                      InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+                      InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+                   ],[
+                      InlineKeyboardButton('ʙᴏᴛ ᴏᴡɴᴇʀ', url="https://t.me/LOYALPROFESSOR")
+                     ],
+                     [
+                        InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+                     ]
+                    ]
                 )
+            )
             filetype = msg.media
             file = getattr(msg, filetype.value)
             title = file.file_name
@@ -334,14 +348,20 @@ async def start(client, message):
         caption=f_caption,
         protect_content=True if pre == 'filep' else False,
         reply_markup=InlineKeyboardMarkup(
-                        [
-                         [
-                          InlineKeyboardButton('Cʜᴀɴɴᴇʟs', url=GRP_LNK),
-                          InlineKeyboardButton('Sᴛʀᴇᴀᴍ Oɴʟɪɴᴇ', url=STRM_BOT)
-                         ]
-                        ]
-                    )
-                )
+            [
+             [
+              InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=f'https://t.me/{SUPPORT_CHAT}'),
+              InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
+           ],[
+              InlineKeyboardButton('ʙᴏᴛ ᴏᴡɴᴇʀ', url="https://t.me/LOYALPROFESSOR")
+             ],
+             [
+              InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file_id}') #Don't change anything without contacting me @LazyDeveloperr
+             ]
+            ]
+        )
+    )
+    
                     
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
