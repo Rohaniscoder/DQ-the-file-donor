@@ -23,12 +23,9 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [[
                     InlineKeyboardButton('𝗔𝗱𝗱 𝗠𝗲 𝗧𝗼 𝗬𝗼𝘂𝗿 𝗚𝗿𝗼𝘂𝗽 ', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
-                ],[                     
-                    InlineKeyboardButton('𝗜𝗻𝗹𝗶𝗻𝗲 𝗦𝗲𝗮𝗿𝗰𝗵', switch_inline_query_current_chat=''), 
-                    InlineKeyboardButton('𝗙𝗲𝗮𝘁𝘂𝗿𝗲𝘀', callback_data='help')
-                ],[                    
-                    InlineKeyboardButton('𝗔𝗯𝗼𝘂𝘁', callback_data='about'),
-                    InlineKeyboardButton('𝗔𝗻𝘆 𝗤𝘂𝗲𝗿𝘆', url="t.me/Unknown_Support_Bot")                            
+                ],[                                       
+                    InlineKeyboardButton('𝗔𝗻𝘆 𝗤𝘂𝗲𝗿𝘆', url="t.me/Unknown_Support_Bot"), 
+                    InlineKeyboardButton('Rules', url="t.me/Unknown_Support_Bot")
                 ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
