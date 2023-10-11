@@ -10,3 +10,6 @@ git+https://github.com/Joelkb/cinemagoer
 datetime
 pytz
 aiohttp
+python-telegram-bot==12.8
+ujson
+python-dotenv
