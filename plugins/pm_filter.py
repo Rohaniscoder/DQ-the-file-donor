@@ -1249,14 +1249,16 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     
     elif query.data == "help":
-        buttons = [[          
+        buttons = [[
+            InlineKeyboardButton('FIʟᴛᴇʀs', callback_data='Ex_Feature'), 
             InlineKeyboardButton('FIʟᴛᴇʀs', callback_data='filters'),
             InlineKeyboardButton('Fɪʟᴇ Sᴛᴏʀᴇ', callback_data='store_file')
-        ],[
+        ], [
             InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴ', callback_data='coct'),
             InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅs', callback_data='extra')
-        ],[
-            InlineKeyboardButton('Hᴏᴍᴇ', callback_datasta='start')        
+        ], [
+            InlineKeyboardButton('Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('Sᴛᴀᴛᴜs', callback_data='stats')
         ]]
         
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -1411,7 +1413,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
        )
     elif query.data == "tele":
         buttons = [[
-            InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='mods')
+            InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='Ex_Feature')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -1421,7 +1423,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
        ) 
     elif query.data == "sticker":
         buttons = [[
-            InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='mods')
+            InlineKeyboardButton('‹‹‹ Bᴀᴄᴋ', callback_data='Ex_Feature')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
