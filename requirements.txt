@@ -12,3 +12,4 @@ pytz
 aiohttp
 jinja2
 telegraph==2.2.0
+Pillow==9.4.0
