@@ -53,7 +53,7 @@ RD_RULES = environ.get('RD_RULES', "https://t.me/c/1845700490/3")
 SUPT_CHNL = environ.get('SUPT_CHNL', "https://t.me/c/1845700490/3")
 
 
-IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'False')), False)
+IS_VERIFY = is_enabled((environ.get('IS_VERIFY', 'True')), False)
 HOW_TO_VERIFY = environ.get('HOW_TO_VERIFY', "https://t.me/c/1845700490/3")
 VERIFY2_URL = environ.get('VERIFY2_URL', "mdisklink.link")
 VERIFY2_API = environ.get('VERIFY2_API', "4fa150d44b4bf6579c24b33bbbb786dbfb4fc673")
