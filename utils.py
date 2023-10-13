@@ -654,11 +654,8 @@ async def send_all(bot, userid, files, ident):
                 protect_content=True if ident == "filep" else False,
                 reply_markup=InlineKeyboardMarkup(
                    [
-                        [
-                        InlineKeyboardButton('Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ', url=CHNL_LNK),
-                        InlineKeyboardButton('Uᴘᴅᴀᴛᴇs Cʜᴀɴɴᴇʟ', url=CHNL_LNK)
-                    ],[ 
-                        InlineKeyboardButton('🚀 Fast Download / Watch Online🖥️', callback_data=f'generate_stream_link:{file.file_id}') #Don't change anything without contacting me @LazyDeveloperr
+                        [ 
+                        InlineKeyboardButton('Fᴀsᴛ Dᴏᴡɴʟᴏᴀᴅ / Wᴛᴀᴄʜ Oɴʟɪɴᴇ', callback_data=f'generate_stream_link:{file.file_id}') #Don't change anything without contacting me @LazyDeveloperr
                         ]
                     ]
                 )
