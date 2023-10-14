@@ -42,9 +42,11 @@ async def save_group(bot, message):
                     InlineKeyboardButton('Hᴏᴡ Tᴏ Usᴇ Mᴇ', url="https://t.me/+CRxXz6AAWTQ4ZWFl")
                   ]]
         reply_markup=InlineKeyboardMarkup(buttons)
-        await message.reply_text(
+       d = await message.reply_text(
             text=f"<b>Tʜᴀɴᴋ Yᴏᴜ Fᴏʀ Aᴅᴅɪɴɢ Mᴇ Iɴ {message.chat.title} ❣️\n\n➪ Dᴏɴ'ᴛ Fᴏʀɢᴇᴛ Tᴏ Mᴀᴋᴇ Mᴇ Aᴅᴍɪɴ ⚠️!\n\n➪ Iғ Yᴏᴜ Hᴀᴠᴇ Aɴʏ Dᴏᴜʙᴛ Yᴏᴜ Cʟᴇᴀʀ Iᴛ Usɪɴɢ Bᴇʟᴏᴡ Bᴜᴛᴛᴏɴs.</b>",
             reply_markup=reply_markup)
+       await asyncio.sleep(5) 
+       await d.delete() 
     else:
         settings = await get_settings(message.chat.id)
         if settings["welcome"]:
