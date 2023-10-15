@@ -21,7 +21,12 @@
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
     <script src="https://cdn.tailwindcss.com"></script>
 <style>
-	
+	#info{
+            flex-wrap:wrap;
+            display:flex;
+          }
+
+
 </style>
 </head>
 
@@ -72,12 +77,12 @@
         </div>
 	<div class="bg-black ">
 		<div>
-		<p id="info">💾 File Name - </p>	
-		<p id="info">{{file_name}}</p>
+		<span id="info">💾 File Name - </span>	
+		<span id="info">{{file_name}}</span>
 		</div>
 		<div>
-	         <p id="info">👻 File Size - </p>
-		<p id="info">>{{file_size}}</p>                     
+	         <span id="info">👻 File Size - </span>
+		<span id="info">{{file_size}}</span>                     
 		</div>
 	</div>
           
