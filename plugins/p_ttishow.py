@@ -47,7 +47,7 @@ async def save_group(bot, message):
             reply_markup=reply_markup
             )                
 
-        await asyncio.sleep(5) 
+        await asyncio.sleep(60) 
         await d.delete()         
     else:
         settings = await get_settings(message.chat.id)
