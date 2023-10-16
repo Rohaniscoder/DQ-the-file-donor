@@ -20,7 +20,15 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Delius">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.6.9/plyr.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-
+  <style> 
+    
+    #info{      
+      word-wrap: break-word
+	    text:h4;
+    }
+  
+  
+  </style>
 </head>
 
 <body class="bg-black">
@@ -68,22 +76,16 @@
                 </video>
             </div>
         </div>
-	<div class="justify-content-center align-items-center w-100 d-flex mb-3">
-                <div class="row d-flex w-100 justify-content-center align-items-center">
-                    <div class="col-lg-8 col-10  py-2 text-center bg-black
-                    text-info text-sm wow animate__animated animate__FadeIn">
-                         File Name - {{file_name}}
-                    </div>
-                </div>
-	</div>
-	<div class="justify-content-center align-items-center w-100 d-flex mb-3">
-                <div class="row d-flex w-100 justify-content-center align-items-center">
-                    <div class="col-lg-8 col-10  py-2 text-center bg-black
-                    text-info text-sm wow animate__animated animate__FadeIn">
-                         File Size - {{file_size}}
-                    </div>
-                </div>
-	</div>
+	       <!-- File Info -->
+	     <div>
+		     <span>File Name : </span>
+		     <span id="info">{{file_name}}</span>
+		     
+	     </div>
+	    <div>
+		    <span>File Size :</span>
+		    <span id="info">{{file_size}}</span>
+            </div>
 	
 	
                        <!-- External video player section -->
